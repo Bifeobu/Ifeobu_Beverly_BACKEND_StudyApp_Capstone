@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 //cross origins
-const cors = require('cors');
+// const cors = require('cors');
 
 // Requiring example router
 const userRouter = require('./routes/users.js');
@@ -17,7 +17,7 @@ const userRouter = require('./routes/users.js');
 app.use(express.json());
 
 //Middleware to open server port 8000 for requests
-app.use(cors());
+// app.use(cors());
 
 //Custom Middlware
 app.use((req, res, next) => {
