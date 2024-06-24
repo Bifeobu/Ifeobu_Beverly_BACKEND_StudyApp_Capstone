@@ -6,11 +6,18 @@ const express = require('express');
 const app = express();
 // Port in which the server will run on
 const PORT = process.env.PORT || 8000;
+
+//cross origins
+const cors = require('cors');
+
 // Requiring example router
 const userRouter = require('./routes/users.js');
 
 // Configuring the server to accept and parse JSON data.
 app.use(express.json());
+
+//Middleware to open server port 8000 for requests
+app.use(cors());
 
 //Custom Middlware
 app.use((req, res, next) => {
