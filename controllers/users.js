@@ -4,6 +4,7 @@ module.exports = {
   createUser,
 };
 
+//POST request function for user
 async function createUser(req, res) {
   try {
     const user = await User.create(req.body);
