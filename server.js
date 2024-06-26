@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 //cross origins
-// const cors = require('cors');
+const cors = require('cors');
 
 // Requiring example router
 const formRouter = require('./routes/checkForms.js');
@@ -17,13 +17,13 @@ const formRouter = require('./routes/checkForms.js');
 app.use(express.json());
 
 //Middleware to open server port 8000 for requests
-// app.use(cors());
+app.use(cors());
 
 //Custom Middlware
-app.use((req, res, next) => {
-  console.log(`A ${req.method} request was made to ${req.url}`);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`A ${req.method} request was made to ${req.url}`);
+//   next();
+// });
 
 // Connecting the router to the server
 app.use('/check-in', formRouter);
