@@ -1,11 +1,11 @@
 const User = require('../models/User');
 
 module.exports = {
-  createUser,
+  createForm,
 };
 
 //POST request function for user
-async function createUser(req, res) {
+async function createForm(req, res) {
   try {
     const user = await User.create(req.body);
 
