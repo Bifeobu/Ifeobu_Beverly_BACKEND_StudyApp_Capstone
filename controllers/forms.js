@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const Form = require('../models/Form');
 
 module.exports = {
   createForm,
@@ -7,9 +7,9 @@ module.exports = {
 //POST request function for user
 async function createForm(req, res) {
   try {
-    const user = await User.create(req.body);
+    const form = await Form.create(req.body);
 
-    res.status(200).json(user);
+    res.status(200).json(form);
   } catch (err) {
     res.status(400).json('No Beuno:(');
   }

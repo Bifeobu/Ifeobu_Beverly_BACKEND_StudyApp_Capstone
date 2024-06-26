@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const usersCtrl = require('../controllers/users.js');
+const formsCtrl = require('../controllers/forms.js');
 
 const router = Router();
 
 //user POST route
-router.post('/check-in', usersCtrl.createForm);
+router.post('/check-in', formsCtrl.createForm);
 
 module.exports = router;
