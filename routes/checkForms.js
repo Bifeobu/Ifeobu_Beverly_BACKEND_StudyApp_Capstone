@@ -13,6 +13,6 @@ router.get('/check-in', formsCtrl.getForms);
 router.patch('/check-in/:id', formsCtrl.updateForm);
 
 //DELETE form route by ID
-router.delete('/check-in/:id', formsCtrl.updateForm);
+router.delete('/check-in/:id', formsCtrl.deleteForm);
 
 module.exports = router;
