@@ -1,6 +1,6 @@
 const { Schema, model } = require('../config/db-connection');
 
-const userSchema = Schema({
+const formSchema = Schema({
   mood: {
     type: String,
     required: true,
@@ -18,4 +18,4 @@ const userSchema = Schema({
   }
 });
 
-module.exports = model('User', userSchema);
+module.exports = model('Form', formSchema);
