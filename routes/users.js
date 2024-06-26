@@ -4,6 +4,6 @@ const usersCtrl = require('../controllers/users.js');
 const router = Router();
 
 //user POST route
-router.post('/', usersCtrl.createForm);
+router.post('/check-in', usersCtrl.createForm);
 
 module.exports = router;
